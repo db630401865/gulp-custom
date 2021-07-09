@@ -1,0 +1,77 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn install
+
+PATH: 
+  /Library/Frameworks/Python.framework/Versions/3.8/bin:/Library/Frameworks/Python.framework/Versions/3.9/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin:/Library/Frameworks/Python.framework/Versions/3.9/bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.17.3
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: http://192.168.138.182:8081/repository/cc-npm-group/v8-to-istanbul/-/v8-to-istanbul-7.1.2.tgz: Request failed "500 Internal Server Error"
+      at ResponseError.ExtendableBuiltin (/usr/local/lib/node_modules/yarn/lib/cli.js:696:66)
+      at new ResponseError (/usr/local/lib/node_modules/yarn/lib/cli.js:802:124)
+      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:67058:16)
+      at Request.emit (events.js:375:28)
+      at Request.module.exports.Request.onRequestResponse (/usr/local/lib/node_modules/yarn/lib/cli.js:141539:10)
+      at ClientRequest.emit (events.js:375:28)
+      at HTTPParser.parserOnIncomingClient (_http_client.js:647:27)
+      at HTTPParser.parserOnHeadersComplete (_http_common.js:126:17)
+      at Socket.socketOnData (_http_client.js:515:22)
+      at Socket.emit (events.js:375:28)
+
+npm manifest: 
+  {
+    "name": "my-project",
+    "version": "0.1.0",
+    "description": "Awesome node modules.",
+    "keywords": [
+      "my-project",
+      "zce"
+    ],
+    "repository": "gulp-custom/my-project",
+    "license": "MIT",
+    "author": "bo.dong <bo.dong@bangcle.com> (https://github.com/db630401865/gulp-custom.git)",
+    "main": "lib/index.js",
+    "files": [
+      "lib"
+    ],
+    "scripts": {
+      "lint": "standard --fix",
+      "test": "jest --coverage",
+      "prepare": "npm run lint && npm run test"
+    },
+    "renovate": {
+      "extends": [
+        "zce"
+      ]
+    },
+    "standard": {
+      "env": [
+        "jest"
+      ]
+    },
+    "dependencies": {},
+    "devDependencies": {
+      "jest": "26.6.3",
+      "standard": "16.0.3"
+    },
+    "engines": {
+      "node": ">=10"
+    },
+    "publishConfig": {
+      "registry": "https://registry.npmjs.org"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
